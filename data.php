@@ -1,12 +1,7 @@
 <?php 
+require_once(__DIR__ . "/config.php");
 require_once(__DIR__ . "/PDO.class.php");
 
-define('DBPort', 3306);
-define('DBHost', '127.0.0.1');
-define('DBName', 'ansible');
-define('DBUser', 'root');
-define('DBPassword', '');
-require_once(__DIR__ . "/PDO.class.php");
 $DB = new Db(DBHost, DBPort, DBName, DBUser, DBPassword);
 
 if(isset($_POST['action']))
